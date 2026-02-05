@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex Central - Your Pokemon Index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>⚡ PokéDex Central</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/pokedex.html">PokéDex</a></li>
+                <li><a href="pages/calculator.html">Type Calculator</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to PokéDex Central!</h2>
+                <p>Your ultimate resource for Pokemon information, type calculations, and more!</p>
+                <!-- BUG 1: Navigation bug - wrong href -->
+                <button id="explore-btn" class="cta-button">Explore PokéDex</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Complete PokéDex</h3>
+                    <p>Browse through all Pokemon with detailed stats and information.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Type Calculator</h3>
+                    <p>Calculate type advantages and battle statistics.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Search & Filter</h3>
+                    <p>Find your favorite Pokemon quickly with our advanced search.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-counter">
+            <h2>Pokemon Caught Counter</h2>
+            <div class="counter-display">
+                <p>Total Pokemon Caught: <span id="counter-value">0</span></p>
+                <!-- BUG 2: Counter bug - wrong class name for event listener -->
+                <button class="increment-btn">Catch Pokemon (+1)</button>
+                <button id="reset-btn">Reset Counter</button>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Stay Updated!</h2>
+            <p>Subscribe to our newsletter for the latest Pokemon news</p>
+            <!-- BUG 3: Form submission bug - wrong ID -->
+            <form id="newsletter-form">
+                <input type="email" id="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- VISUAL BUG 1: Footer text aligned to top-right instead of centered -->
+        <p class="footer-text">&copy; 2024 PokéDex Central. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

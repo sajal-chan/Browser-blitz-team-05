@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PokéDex Central</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>⚡ PokéDex Central</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="pokedex.html">PokéDex</a></li>
+                <li><a href="calculator.html">Type Calculator</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-intro">
+            <!-- VISUAL BUG 5: Three different clashing fonts -->
+            <h2 class="font-clash-1">Get in Touch!</h2>
+            <p class="font-clash-2">Have questions about Pokemon? Want to report a bug? We'd love to hear from you!</p>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Send us a Message</h2>
+            <!-- BUG 8: Form submit handler attached to wrong element -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <!-- VISUAL BUG 6: Submit button is warning yellow instead of success green -->
+                <button type="submit" class="submit-btn warning-color">Send Message</button>
+            </form>
+            <div id="contact-message"></div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I search for a specific Pokemon?</h3>
+                    <p class="faq-answer" style="display: none;">
+                        Go to the PokéDex page and use the search bar at the top. 
+                        Type the Pokemon name and results will appear instantly!
+                    </p>
+                    <button class="toggle-faq">Show Answer</button>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What does the Type Calculator do?</h3>
+                    <p class="faq-answer" style="display: none;">
+                        The Type Calculator helps you determine damage calculations and type effectiveness 
+                        for battles. It's perfect for planning your strategy!
+                    </p>
+                    <button class="toggle-faq">Show Answer</button>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I suggest new features?</h3>
+                    <p class="faq-answer" style="display: none;">
+                        Absolutely! Use the contact form above to send us your suggestions. 
+                        We love hearing from our community!
+                    </p>
+                    <button class="toggle-faq">Show Answer</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <!-- VISUAL BUG 7: Inconsistent spacing and alignment -->
+            <h2 class="font-clash-3">Contact Information</h2>
+            <div class="info-grid weird-spacing">
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>info@pokedexcentral.com</p>
+                </div>
+                <div class="info-item">
+                    <h3>Discord</h3>
+                    <p>PokéDex Central Server</p>
+                </div>
+                <div class="info-item">
+                    <h3>Twitter</h3>
+                    <p>@PokedexCentral</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- VISUAL BUG 8: Footer text alignment -->
+        <p class="footer-text">&copy; 2024 PokéDex Central. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

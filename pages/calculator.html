@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Calculator - Battle Stats</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>⚡ PokéDex Central</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="pokedex.html">PokéDex</a></li>
+                <li><a href="calculator.html" class="active">Type Calculator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="calculator-page">
+        <section class="damage-calculator">
+            <h2>Damage Calculator</h2>
+            <p>Calculate total damage from multiple attacks</p>
+            
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="attack1">Attack 1 Damage:</label>
+                    <input type="number" id="attack1" value="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="attack2">Attack 2 Damage:</label>
+                    <input type="number" id="attack2" value="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="attack3">Attack 3 Damage:</label>
+                    <input type="number" id="attack3" value="0" min="0">
+                </div>
+            </div>
+
+            <!-- BUG 6: Calculate button uses string concatenation instead of addition -->
+            <button id="calculate-damage">Calculate Total Damage</button>
+            <div class="result-display">
+                <p>Total Damage: <span id="total-damage">0</span></p>
+            </div>
+        </section>
+
+        <section class="stats-calculator">
+            <h2>Pokemon Stats Calculator</h2>
+            <p>Calculate battle power based on level and base stats</p>
+            
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="base-power">Base Power:</label>
+                    <input type="number" id="base-power" value="50" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="level">Level:</label>
+                    <input type="number" id="level" value="1" min="1" max="100">
+                </div>
+                <div class="input-group">
+                    <label for="multiplier">Type Multiplier:</label>
+                    <select id="multiplier">
+                        <option value="0.5">0.5x (Not Effective)</option>
+                        <option value="1" selected>1x (Normal)</option>
+                        <option value="2">2x (Super Effective)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- BUG 7: Wrong button ID in event listener -->
+            <button id="calculate-stats">Calculate Battle Power</button>
+            <div class="result-display">
+                <p>Battle Power: <span id="battle-power">0</span></p>
+            </div>
+        </section>
+
+        <section class="type-chart">
+            <h2>Type Effectiveness Chart</h2>
+            <!-- VISUAL BUG 3: Image overlapping text -->
+            <div class="chart-container overlap-issue">
+                <img src="https://img.pokemondb.net/images/typechart.png" alt="Type Chart" class="type-chart-img">
+                <p class="chart-description">
+                    Use this chart to determine type advantages in battle. 
+                    Super effective moves deal 2x damage, while not very effective moves deal 0.5x damage.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- VISUAL BUG 4: Footer alignment issue -->
+        <p class="footer-text">&copy; 2024 PokéDex Central. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

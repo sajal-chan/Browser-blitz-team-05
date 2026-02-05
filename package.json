@@ -1,0 +1,26 @@
+{
+  "name": "browser-blitz-team-05",
+  "version": "1.0.0",
+  "description": "Pokemon Index website for Browser Blitz competition - contains 8 functional JS bugs and 12 visual red herrings",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "serve": "npx http-server -p 8080",
+    "install-browsers": "playwright install"
+  },
+  "keywords": [
+    "browser-blitz",
+    "pokemon",
+    "vanilla-js",
+    "html",
+    "css"
+  ],
+  "author": "Browser Blitz Volunteer Team 05",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {}
+}
